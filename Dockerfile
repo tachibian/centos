@@ -5,4 +5,5 @@ MAINTAINER Kazuhiro Tachibana
 ENV HOME /root
 USER root
 WORKDIR /root
-RUN yum -y install gcc make 
+ADD init.d /etc/init.d/
+RUN yum -y install gcc make sysvinit-tools
