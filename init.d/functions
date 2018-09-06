@@ -180,7 +180,8 @@ __kill_pids_term_kill() {
 # Returns LSB exit code for the 'status' action.
 __pids_var_run() {
 	local base=${1##*/}
-	local pid_file=${2:-/var/run/$base.pid}
+	#local pid_file=${2:-/var/run/$base.pid}
+	local pid_file=${2:-/var/run/$base/$base.pid}
 
 	pid=
 	if [ -f "$pid_file" ] ; then
